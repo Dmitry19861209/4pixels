@@ -23,7 +23,7 @@ class UsersController extends Controller
      */
     public function getAllUsers()
     {
-        return User::all();
+        return User::orderBy('id')->get();
 
     }
 

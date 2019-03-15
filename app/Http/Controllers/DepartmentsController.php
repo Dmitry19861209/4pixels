@@ -26,6 +26,7 @@ class DepartmentsController extends Controller
     public function getAllDepartments()
     {
         return Department::with('users')
+            ->orderBy('id')
             ->get();
 
     }
