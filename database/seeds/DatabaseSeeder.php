@@ -1,5 +1,7 @@
 <?php
 
+use App\Department;
+use App\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,6 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        $this->deleteTables();
+        $this->call(UsersTableSeeder::class);
+        $this->call(DepartmentsTableSeeder::class);
+    }
+
+    public function deleteTables() {
+        Department::truncate();
+        User::truncate();
     }
 }

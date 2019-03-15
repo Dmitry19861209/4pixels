@@ -12,3 +12,26 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+.td-buttons {
+    display: flex;
+    a:first-child {
+        margin-right: 10px;
+        color: #fff;
+    }
+}
+.td-name {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.td-description {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.70);
+}
+.custom-file {
+    &:hover {
+        .custom-file-label {
+            border: 1px solid #686868 !important;
+        }
+    }
+}
+
